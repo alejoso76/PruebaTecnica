@@ -1,9 +1,9 @@
-import numpy as np
-import regex
+import numpy as np, regex
 
 class MyMatrix:
     count = 0
     dimension = 0
+
     def __init__(self, matrix):
         self.matrix = matrix
 
@@ -12,6 +12,7 @@ class MyMatrix:
         strMatrix = strMatrix.replace('list(', '')
         strMatrix = strMatrix.replace(')', ',')
         dim = 0
+
         for c in strMatrix:
             if c == '[':
                 dim += 1
@@ -43,7 +44,7 @@ b = np.array([[1,2], [2,4]])
 c = np.array([[1,2], [2,4], [2,4]])
 
 d = np.array([[[3,4], [6,5]]])
-    
+
 #No es una matriz válida, por lo tanto no se puede tratar como una
 e = np.array([[[1, 2, 3]], [[5, 6, 7], [5, 4, 3]], [[3, 5, 6], [4, 8, 3], [2, 3]]])
 
